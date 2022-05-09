@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,7 +11,7 @@
  * @author Admin
  */
 public class homeHMS extends javax.swing.JFrame {
-
+    public int i=0;
     /**
      * Creates new form homeHMS
      */
@@ -25,21 +28,113 @@ public class homeHMS extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/two arrow.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 19, -1, -1));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add new patient.png"))); // NOI18N
+        jButton2.setText("Add New Patient Record");
+        jButton2.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 102, -1, -1));
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add diag.png"))); // NOI18N
+        jButton3.setText("Add Diagnosis for Patient");
+        jButton3.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 187, -1, -1));
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_history1.png"))); // NOI18N
+        jButton4.setText("Full Patient History");
+        jButton4.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 264, -1, -1));
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_update_details.png"))); // NOI18N
+        jButton5.setText("Update Patient Record");
+        jButton5.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 341, -1, -1));
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_hospital_information.png"))); // NOI18N
+        jButton6.setText("Hospital Information");
+        jButton6.setPreferredSize(new java.awt.Dimension(240, 59));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 418, -1, -1));
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exit.png"))); // NOI18N
+        jButton7.setText("Log Out");
+        jButton7.setPreferredSize(new java.awt.Dimension(240, 59));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 521, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.jpg"))); // NOI18N
+        jLabel1.setText("BG2");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here: HomeHMS Log Out
+        
+        int a=JOptionPane.showConfirmDialog(null,"Do you really want to Log Out","Select",JOptionPane.YES_NO_OPTION);
+        if (a==0)
+        { 
+            setVisible(false);
+            new LoginHMS().setVisible(true); //to make the Login page come back - page name mesti betul
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if (i==0)
+        {
+                jButton2.setLocation(90,30);
+                jButton3.setLocation(333,30);
+                jButton4.setLocation(576,30);
+                jButton5.setLocation(819,30);
+                jButton6.setLocation(1062,30);
+                jButton7.setLocation(1062,89);
+                i=1;
+                      
+        }
+        else
+        {
+                jButton2.setLocation(10,127);
+                jButton3.setLocation(10,204);
+                jButton4.setLocation(10,281);
+                jButton5.setLocation(10,358);
+                jButton6.setLocation(10,435);
+                jButton7.setLocation(10,510);
+                i=0;
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,5 +172,13 @@ public class homeHMS extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
