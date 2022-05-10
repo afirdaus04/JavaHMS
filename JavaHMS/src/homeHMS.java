@@ -52,6 +52,11 @@ public class homeHMS extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add new patient.png"))); // NOI18N
         jButton2.setText("Add New Patient Record");
         jButton2.setPreferredSize(new java.awt.Dimension(240, 59));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 102, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add diag.png"))); // NOI18N
@@ -112,13 +117,13 @@ public class homeHMS extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: Redirection of Icons
         if (i==0)
         {
-                jButton2.setLocation(90,30);
-                jButton3.setLocation(333,30);
-                jButton4.setLocation(576,30);
-                jButton5.setLocation(819,30);
+                jButton2.setLocation(100,30);
+                jButton3.setLocation(343,30);
+                jButton4.setLocation(586,30);
+                jButton5.setLocation(829,30);
                 jButton6.setLocation(1062,30);
                 jButton7.setLocation(1062,89);
                 i=1;
@@ -135,6 +140,13 @@ public class homeHMS extends javax.swing.JFrame {
                 i=0;
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        new addNewPatientHMS().setVisible(true);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
